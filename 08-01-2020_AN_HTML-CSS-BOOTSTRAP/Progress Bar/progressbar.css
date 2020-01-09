@@ -1,0 +1,31 @@
+h1{
+    padding-left: 44%;
+}
+
+.outer{
+    margin:auto;
+    width:20%;
+    height:5%;
+    margin-top:16%;
+    border:2px solid black;
+}
+
+.progressbar{
+    animation-name:loading;
+    animation-duration:4s;
+    animation-timing-function: linear;
+    border: 1px solid black;
+    height:100%;
+    animation-iteration-count:infinite;
+}
+
+@keyframes loading{
+    from{
+        background-color: red;
+        width:0%
+    }
+    to{
+        background-color: green;
+        width:100%;
+    }
+}

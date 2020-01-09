@@ -1,0 +1,31 @@
+.other{
+    display:inline-block;
+    width:60%;
+}
+
+.row{
+    width:60%;
+    margin:auto;
+    margin-top: 10%;
+    border:1px solid black;
+    padding:3%;
+    box-shadow:5px 6px #888888;
+}
+
+.right-form{
+    border-left:1px solid black;
+    padding-left: 20%;
+}
+
+.help-block{
+    font-size: small;
+    font-weight: lighter;
+}
+
+.checkbox{
+    float:left;
+    margin-top:2%;
+}
+
+
+
