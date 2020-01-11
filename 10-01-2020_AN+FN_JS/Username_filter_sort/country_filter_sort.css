@@ -1,0 +1,23 @@
+.country-form{
+    width:50%;
+    margin: auto;
+    margin-top:6%;
+    border:1px solid black;
+    padding:4%;
+    box-shadow:5px 6px #888888;
+    border:1px solid black;
+}
+
+#names{
+    height:200px;
+    overflow-y: scroll;
+}
+
+#sorted{
+    height:200px;
+    overflow-y: scroll;
+}
+
+#afterSubmit{
+    display:none;
+}

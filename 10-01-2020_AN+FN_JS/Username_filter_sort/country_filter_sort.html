@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Document</title>
+    <script src="country_filter_sort.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body onload="init()">
+    <div class="country-form">
+        <form>
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name">
+            <label for="country">Country</label>
+            <select name="country" class="form-control" id="country">
+                <option disabled hidden selected>Choose..</option>
+                <option value="India">India</option>
+                <option value="England">England</option>
+                <option value="America">America</option>
+            </select>
+            <label for="username">Username</label>
+            <input type="text" class="form-control" id="username" name="username" onkeyup="filterUsernames()">
+            <div id="names">
+
+            </div><br>
+            <button type="button" class="btn btn-primary" onclick="sortUsernames()">Sort</button>
+            <div id="sorted">
+
+            </div>
+            <button type="button" class="btn btn-primary" onclick="onSubmit()">Submit</button>
+        </form>
+        <div id="afterSubmit">
+            <p id="submitted_name"></p>
+            <p id="submitted_country"></p>
+            <p id="submitted_username"></p>
+        </div>
+    </div>
+</body>
+<link rel="stylesheet" href="country_filter_sort.css">
+</html>

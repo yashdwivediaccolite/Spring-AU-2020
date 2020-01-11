@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="login_form.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="login_form.js"></script>
+        <title>Login Form</title>
+    </head>
+    <body>
+        <div class="login_form">
+            <h3>Login Form</h3>
+            <hr>
+            <form name="loginForm">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" name="username"><br>
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" name="password"><br>
+                <label for="confpassword">Confirm Password</label>
+                <input type="password" class="form-control" id="confpassword" name="confpassword"><br>
+                <div class="errors" id="errors">
+                    <p id="minlength">*Password should have 8 characters minimum</p>
+                    <p id="capital">*Password should have atleast 1 Capital Character</p>
+                    <p id="small">*Password should have atleast 1 Small Character</p>
+                    <p id="special">*Password should have atleast 1 Special Character</p>
+                    <p id="match">*Passwords should match</p>
+                    <p id="abc">*Should contain a,b,c</p>
+                </div>
+                <button type="button" class="btn btn-primary" onclick="validateForm()">Submit</button>
+            </form>
+        </div>
+        <div class="show_submitted" id="submitted">
+            Your Username is:<p id="submitted_username"></p>
+            Your Password is:<p id="submitted_password"></p>
+        </div>
+    </body>
+</html>
