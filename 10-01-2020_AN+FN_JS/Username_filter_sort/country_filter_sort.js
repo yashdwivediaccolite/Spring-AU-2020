@@ -9,7 +9,7 @@ function init(){                                                //To initially d
 
 function filterUsernames(){                                     //Function to filter the usernames
     let name=document.getElementById("username");
-    let pattern=new RegExp(name.value);
+    let pattern=new RegExp(name.value,"i");
     var displayNames=[];
     names.forEach((elem)=>{
         if(pattern.test(elem)){
