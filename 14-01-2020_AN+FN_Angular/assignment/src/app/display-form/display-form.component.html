@@ -1,0 +1,27 @@
+<h4 style="margin-top:2%;" *ngIf="!userData || userData.length===0">No User Records</h4><br>
+
+<a  routerLink="/home" class="btn btn-primary more">Add Users</a><br>
+
+<table *ngIf="userData && userData.length>0">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Number</th>
+        <th>Email</th>
+        <th>Delete</th>
+    </tr>
+</thead>
+    <tbody>
+    <tr *ngFor="let user of userData;let i=index">
+        <td>{{user.credentials.name}}</td>
+        <td>{{user.credentials.age}}</td>
+        <td>{{user.contactInfo.phone}}</td>
+        <td>{{user.credentials.name}}</td>
+        <td><button (click)="onDelete(i)" class="btn btn-danger">Delete</button></td>
+    </tr>
+    </tbody>
+</table>
+
+
+

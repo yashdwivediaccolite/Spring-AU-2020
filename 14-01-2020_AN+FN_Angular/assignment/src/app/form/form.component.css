@@ -1,0 +1,17 @@
+input.ng-touched.ng-invalid{
+    border:1px solid red;
+}
+.help-block{
+    font-size:13.5px;
+}
+
+form{
+    width:50%;
+    margin: auto;
+    margin-top:3%;
+    border:1px solid black;
+    box-shadow:5px 6px #888888;
+    padding:5%;
+}
+
+
