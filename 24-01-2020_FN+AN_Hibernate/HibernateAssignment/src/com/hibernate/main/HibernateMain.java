@@ -91,6 +91,7 @@ public class HibernateMain {
 			Item It1=session.get(Item.class, 2);
 			It1.setPrice(70000);
 			It1.setQuantity(20);
+			session.update(It1);
 			session.getTransaction().commit();
 			System.out.println("Successfully updated");
 		}
