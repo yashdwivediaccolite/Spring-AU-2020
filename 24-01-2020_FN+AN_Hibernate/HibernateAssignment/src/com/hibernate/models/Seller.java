@@ -14,6 +14,7 @@ import org.hibernate.annotations.NamedNativeQuery;
 
 
 @Entity
+@DiscriminatorValue("2")
 @NamedNativeQuery(name = "seller.get",query = "SELECT * FROM Seller",resultClass=Seller.class)
 public class Seller extends WebSiteUsers{
 	@Id
