@@ -16,6 +16,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
 @Entity
+@DiscriminatorValue("1")
 public class Customer extends WebSiteUsers{
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
