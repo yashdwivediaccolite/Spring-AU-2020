@@ -7,23 +7,26 @@ public class Market {							//Market class that stores all the market info
 	int max_market_size=40;
 	int current_market_size;
 	
+	ProducerLambda lambda=(s)->{
+		switch(s) {
+		case "apple":this.apple++;
+				     this.current_market_size++;
+				     break;
+		case "orange":this.orange++;
+	     		     this.current_market_size++;
+	     		     break;
+		case "grape":this.grape++;
+	     			 this.current_market_size++;
+	     			 break;
+		case "watermelon":this.watermelon++;
+	     			 this.current_market_size++;
+	     			 break;
+	    default: break; 			 
+		}
+	};
+	
 	void produce(String str) {
-		if(str.equals("apple")) {
-			this.apple++;
-			this.current_market_size++;
-		}
-		else if(str.equals("orange")) {
-			this.orange++;
-			this.current_market_size++;
-		}
-		else if(str.equals("grape")) {
-			this.grape++;
-			this.current_market_size++;
-		}
-		else if(str.equals("watermelon")) {
-			this.watermelon++;
-			this.current_market_size++;
-		}
+		lambda.producerLambda(str);
 	}
 
 }
