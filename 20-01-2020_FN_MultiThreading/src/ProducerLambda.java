@@ -1,4 +1,4 @@
 @FunctionalInterface
 public interface ProducerLambda {
-	public void producerLambda();
+	public void producerLambda(String str);
 }
