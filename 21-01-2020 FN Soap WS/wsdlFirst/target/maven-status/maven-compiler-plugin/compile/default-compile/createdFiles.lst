@@ -1,0 +1,11 @@
+com\akash\ws\trainings\CreateOrdersRequest.class
+com\akash\ws\trainings\CreateOrdersResponse.class
+com\example\wsdlFirst\WsdlFirstApplication.class
+com\akash\ws\trainings\Product.class
+com\akash\ws\trainings\package-info.class
+com\akash\ws\trainings\CustomerOrdersService.class
+com\akash\ws\trainings\GetOrdersResponse.class
+com\akash\ws\trainings\CustomerOrdersPortType.class
+com\akash\ws\trainings\GetOrdersRequest.class
+com\akash\ws\trainings\Order.class
+com\akash\ws\trainings\ObjectFactory.class
