@@ -1,10 +1,11 @@
-import java.util.*;
+import java.util.Scanner;
+import java.util.stream.Stream;
 public class Consumer implements Runnable{
 	Market market;
 	Consumer(Market mer){
 		this.market=mer;
 	}
-	
+
 	public void run() {
 		Scanner sc=new Scanner(System.in);
 		int runs=2;
@@ -17,11 +18,8 @@ public class Consumer implements Runnable{
 						e.printStackTrace();
 					}
 				}
-				System.out.println("Choose a fruit");							//Offering Consumer to give his/her choice of fruit to buy
-				System.out.println("1.Apple");
-				System.out.println("2.Orange");
-				System.out.println("3.Grape");
-				System.out.println("4.Watermelon");
+				Stream<String> stream=Stream.of("Choose a fruit","1.Apple","2.Orange","3.Grape","4.Watermelon");   //Using Streams to print data
+				stream.forEach(s->System.out.println(s));
 				int choice=sc.nextInt();
 				switch(choice) {												//Updating market parameters after consumer buys something
 				case 1:
@@ -78,9 +76,9 @@ public class Consumer implements Runnable{
 					System.out.println("Consumer:"+Thread.currentThread().getName() +" got watermelon");
 					break;	
 				default: System.out.println("Choose a valid option");
-					break;	
+				break;	
 				}
-				if(runs==1) {													// To make sure all Consumers get fair chance to buy
+				if(runs==1) {													// To make sure all Consumes get fair chance to buy
 					try {
 						this.market.wait();
 						Thread.sleep(1000);
@@ -89,7 +87,7 @@ public class Consumer implements Runnable{
 					}
 					runs=3;
 				}
-					runs--;
+				runs--;
 				this.market.notifyAll();
 			}
 		}
